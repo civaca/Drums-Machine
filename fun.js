@@ -7,10 +7,10 @@ const letters=["Q", "W", "E", "A", "S", "D", "Z", "X", "C"]
 
 
 let DRUMS=()=>{
-    const[dtext,setDtext]=useState("hola");
+    const[dtext,setDtext]=useState("");
    useEffect(()=>{
-    document.getElementById("todo").focus();
-    document.getElementById("todo").onkeyup=(event)=>{ switch(event.key.toUpperCase()){
+    document.getElementById("final").focus();
+    document.getElementById("final").onkeyup=(event)=>{ switch(event.key.toUpperCase()){
         case "Q":
             handleChange(letters[0],instruments[0]);
             break; 
@@ -57,8 +57,9 @@ let handleKeys=(event)=>{
 
 
     return(
-        <div id="drum-machine" >
+    <div>
         <p id="display">{dtext}</p>
+        <div id="drum-machine" >
         <button class="drum-pad btn btn-blox btn-primary" id="heater_1" onClick={()=>{handleChange(letters[0],instruments[0])}}>
             {letters[0]}<audio src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3" type="audio/mpeg" id={letters[0]} class="clip"></audio>
         </button>
@@ -86,9 +87,8 @@ let handleKeys=(event)=>{
         <button class="drum-pad btn btn-blox btn-primary" id="ClosedHH" onClick={()=>{handleChange(letters[8],instruments[8])}}>
             {letters[8]}<audio src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3" type="audio/mpeg" id={letters[8]} class="clip"></audio>
         </button>
-        
-</div>
-
+       </div>
+    </div>
     )
 
 

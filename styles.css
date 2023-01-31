@@ -1,19 +1,52 @@
-h1{
+:root{
+  --withdrum:clamp(400px,60%,65%);
+  --bcd:rgba(35, 175, 221, 0.6)
+}
+body{
+  background: #F5F1ED !important ;
+}
+#title{
   text-align: center;
+  padding-top: 3rem;
+  font-weight: 700 ;
+  font-size: 22px;
+  
+}
+p{
+  background-color: var(--bcd);
+  text-align: center;
+  margin: 40px auto 0px  auto !important;
+  padding:1.7rem;
+  width: var(--withdrum);
+  font-size: x-large ;
+  font-weight: 700;
+  border: 7px solid var(--bcd);
 }
 #drum-machine{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  background-color: green;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--bcd);
   align-items: center;
-  margin:10rem 0em;
-  height: 400px;;
+  margin:auto;
+  margin-top: 0;
+  height: 360px;;
+  width: var(--withdrum);
+  padding: 1%;
+  border: 2px solid var(--bcd);
+  border-top: 0;
   
 }
 .drum-pad{
-   width: 10%;
-  height: 10%;
+   width: 30%;
+  height: 30%;
   text-align: center;
+  font-size: 30px !important;
+  font-weight: 400 !important;
   
+}
+#final:focus{
+  border: none;
+  outline: none;
 }
